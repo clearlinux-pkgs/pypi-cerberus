@@ -4,7 +4,7 @@
 #
 Name     : pypi-cerberus
 Version  : 1.3.4
-Release  : 1
+Release  : 2
 URL      : https://files.pythonhosted.org/packages/c4/87/55f8b2e36a5f97c5aaf6424e75f7a21cbd69d0365f6e2e332d03d029bb15/Cerberus-1.3.4.tar.gz
 Source0  : https://files.pythonhosted.org/packages/c4/87/55f8b2e36a5f97c5aaf6424e75f7a21cbd69d0365f6e2e332d03d029bb15/Cerberus-1.3.4.tar.gz
 Summary  : Lightweight, extensible schema and data validation tool for Python dictionaries.
@@ -50,7 +50,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1639057254
+export SOURCE_DATE_EPOCH=1639057527
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
