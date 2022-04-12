@@ -4,12 +4,13 @@
 #
 Name     : pypi-cerberus
 Version  : 1.3.4
-Release  : 3
+Release  : 4
 URL      : https://files.pythonhosted.org/packages/c4/87/55f8b2e36a5f97c5aaf6424e75f7a21cbd69d0365f6e2e332d03d029bb15/Cerberus-1.3.4.tar.gz
 Source0  : https://files.pythonhosted.org/packages/c4/87/55f8b2e36a5f97c5aaf6424e75f7a21cbd69d0365f6e2e332d03d029bb15/Cerberus-1.3.4.tar.gz
 Summary  : Lightweight, extensible schema and data validation tool for Python dictionaries.
 Group    : Development/Tools
 License  : ISC
+Requires: pypi-cerberus-license = %{version}-%{release}
 Requires: pypi-cerberus-python = %{version}-%{release}
 Requires: pypi-cerberus-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
@@ -20,6 +21,14 @@ BuildRequires : pypi(setuptools)
         |build-status| |python-support| |black|
         
         Cerberus is a lightweight and extensible data validation library for Python.
+
+%package license
+Summary: license components for the pypi-cerberus package.
+Group: Default
+
+%description license
+license components for the pypi-cerberus package.
+
 
 %package python
 Summary: python components for the pypi-cerberus package.
@@ -50,7 +59,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1639057527
+export SOURCE_DATE_EPOCH=1649724854
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -65,6 +74,8 @@ python3 -m build --wheel --skip-dependency-check --no-isolation
 %install
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/pypi-cerberus
+cp %{_builddir}/Cerberus-1.3.4/LICENSE %{buildroot}/usr/share/package-licenses/pypi-cerberus/1887ddf1ee05ccdccdade2ccab4757f2dd1cbb74
 pip install --root=%{buildroot} --no-deps --ignore-installed dist/*.whl
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -72,6 +83,10 @@ echo ----[ mark ]----
 
 %files
 %defattr(-,root,root,-)
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/pypi-cerberus/1887ddf1ee05ccdccdade2ccab4757f2dd1cbb74
 
 %files python
 %defattr(-,root,root,-)
