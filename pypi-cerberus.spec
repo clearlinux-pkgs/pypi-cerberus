@@ -4,7 +4,7 @@
 #
 Name     : pypi-cerberus
 Version  : 1.3.4
-Release  : 14
+Release  : 15
 URL      : https://files.pythonhosted.org/packages/c4/87/55f8b2e36a5f97c5aaf6424e75f7a21cbd69d0365f6e2e332d03d029bb15/Cerberus-1.3.4.tar.gz
 Source0  : https://files.pythonhosted.org/packages/c4/87/55f8b2e36a5f97c5aaf6424e75f7a21cbd69d0365f6e2e332d03d029bb15/Cerberus-1.3.4.tar.gz
 Summary  : Lightweight, extensible schema and data validation tool for Python dictionaries.
