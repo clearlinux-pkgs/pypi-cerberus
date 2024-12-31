@@ -6,10 +6,10 @@
 # autospec commit: 5424026
 #
 Name     : pypi-cerberus
-Version  : 1.3.6
-Release  : 20
-URL      : https://files.pythonhosted.org/packages/dc/85/2d233b603cafe85662726c32710788bb6c21539db4739b77f5d9938ae79b/cerberus-1.3.6.tar.gz
-Source0  : https://files.pythonhosted.org/packages/dc/85/2d233b603cafe85662726c32710788bb6c21539db4739b77f5d9938ae79b/cerberus-1.3.6.tar.gz
+Version  : 1.3.7
+Release  : 21
+URL      : https://files.pythonhosted.org/packages/08/92/6d861524d97a2c4913816309ca12afe313b32c8efc3ec641de98b890834b/cerberus-1.3.7.tar.gz
+Source0  : https://files.pythonhosted.org/packages/08/92/6d861524d97a2c4913816309ca12afe313b32c8efc3ec641de98b890834b/cerberus-1.3.7.tar.gz
 Summary  : Lightweight, extensible schema and data validation tool for Pythondictionaries.
 Group    : Development/Tools
 License  : ISC
@@ -56,10 +56,10 @@ python3 components for the pypi-cerberus package.
 
 
 %prep
-%setup -q -n cerberus-1.3.6
-cd %{_builddir}/cerberus-1.3.6
+%setup -q -n cerberus-1.3.7
+cd %{_builddir}/cerberus-1.3.7
 pushd ..
-cp -a cerberus-1.3.6 buildavx2
+cp -a cerberus-1.3.7 buildavx2
 popd
 
 %build
@@ -67,7 +67,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1735094020
+export SOURCE_DATE_EPOCH=1735659119
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
